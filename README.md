@@ -1,1 +1,1 @@
-# clovece-nezlob-se
+# Člověče, nezlob se!
