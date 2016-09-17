@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs-cz">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Člověče, nezlob se!</title>
+
+	<?php foreach ($styles as $style): ?>
+		<link rel="stylesheet" href="src/css/<?= $style ?>">
+	<?php endforeach; ?>
+
+	<?php foreach ($scripts as $script): ?>
+		<link rel="stylesheet" href="src/js/<?= $script ?>">
+	<?php endforeach; ?>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-lg-12">
+				<h1 class="text-center">Člověče, nezlob se!</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-l2">
+				<div class="panel panel-primary">
+					<div class="panel-body">
+						<?php require_once $gameView ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
