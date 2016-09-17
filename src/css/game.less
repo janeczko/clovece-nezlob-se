@@ -7,6 +7,7 @@
 	.game-table {
 		width: 100%;
 		height: 100%;
+		position: relative;
 
 		.line {
 
@@ -40,6 +41,19 @@
 				}
 
 				&.home-box, &.finish-box, &.start-field {
+					&.green { background-color: green; }
+					&.blue { background-color: blue; }
+					&.red { background-color: red; }
+					&.yellow { background-color: yellow; }
+				}
+
+				.player {
+					margin: 0 auto 0 auto;
+					width: 28px;
+					height: 28px;
+					border: 2px solid black;
+					border-radius: 28px;
+
 					&.green { background-color: green; }
 					&.blue { background-color: blue; }
 					&.red { background-color: red; }

@@ -7,6 +7,7 @@
 #game-view .game-table {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 #game-view .game-table .box {
   position: relative;
@@ -41,5 +42,24 @@
 #game-view .game-table .box .box-item.home-box.yellow,
 #game-view .game-table .box .box-item.finish-box.yellow,
 #game-view .game-table .box .box-item.start-field.yellow {
+  background-color: yellow;
+}
+#game-view .game-table .box .box-item .player {
+  margin: 0 auto 0 auto;
+  width: 28px;
+  height: 28px;
+  border: 2px solid black;
+  border-radius: 28px;
+}
+#game-view .game-table .box .box-item .player.green {
+  background-color: green;
+}
+#game-view .game-table .box .box-item .player.blue {
+  background-color: blue;
+}
+#game-view .game-table .box .box-item .player.red {
+  background-color: red;
+}
+#game-view .game-table .box .box-item .player.yellow {
   background-color: yellow;
 }

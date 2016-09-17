@@ -1,6 +1,6 @@
 <div id="game-view" class="center-block hidden-xs">
 
-	<table class="game-table">
+	<table v-if="gameInitialized" class="game-table">
 		<tr class="line" v-for="line in game.getField()" track-by="$index">
 			<td class="box" v-for="box in line" track-by="$index">
 				<div class="box-item {{ box.cssClass }}">
@@ -9,6 +9,14 @@
 			</td>
 		</tr>
 	</table>
+
+	<div v-if="!gameInitialized" id="create-new-game" class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="text-center">Nová hra</h2>
+			</div>
+		</div>
+	</div>
 
 </div>
 
