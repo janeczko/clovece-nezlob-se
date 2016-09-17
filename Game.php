@@ -3,7 +3,7 @@
 class Game
 {
 	const INDEX_VIEW = 'view/index-view.phtml';
-	const GAME_VIEW = 'view/game-view.phtml';
+	const GAME_VIEW = 'view/game-view.html';
 
 	protected function renderData()
 	{
@@ -12,12 +12,27 @@ class Game
 		];
 	}
 
-	protected function scripts()
+	protected function headScripts()
 	{
 		return [
 			'jquery-3.1.0.js',
 			'bootstrap.js',
-			'vue.js',
+			'vue.js'
+		];
+	}
+
+	protected function bodyScripts()
+	{
+		return [
+			'game-components.js',
+			'game.js'
+		];
+	}
+
+	protected function configScripts()
+	{
+		return [
+			'game-field.js'
 		];
 	}
 
@@ -33,7 +48,9 @@ class Game
 	{
 		extract($this->renderData());
 		$styles = $this->styles();
-		$scripts = $this->scripts();
+		$headScripts = $this->headScripts();
+		$bodyScripts = $this->bodyScripts();
+		$configScripts = $this->configScripts();
 
 		require_once self::INDEX_VIEW;
 	}

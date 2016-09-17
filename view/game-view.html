@@ -1,0 +1,17 @@
+<div id="game-view" class="center-block hidden-xs">
+
+	<table class="game-table">
+		<tr class="line" v-for="line in game.getField()" track-by="$index">
+			<td class="box" v-for="box in line" track-by="$index">
+				<div class="box-item {{ box.cssClass }}">
+
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div id="game-xs" class="visible-xs">
+	<h2 class="text-center">Hra není funkční na mlých zařízeních</h2>
+</div>

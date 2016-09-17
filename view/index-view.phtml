@@ -12,8 +12,12 @@
 		<link rel="stylesheet" href="src/css/<?= $style ?>">
 	<?php endforeach; ?>
 
-	<?php foreach ($scripts as $script): ?>
-		<link rel="stylesheet" href="src/js/<?= $script ?>">
+	<?php foreach ($headScripts as $script): ?>
+		<script src="src/js/<?= $script ?>"></script>
+	<?php endforeach; ?>
+
+	<?php foreach ($configScripts as $script): ?>
+		<script src="src/config/<?= $script ?>"></script>
 	<?php endforeach; ?>
 </head>
 <body>
@@ -28,16 +32,15 @@
 
 		<div class="row">
 			<div class="col-lg-l2">
-				<div class="panel panel-primary">
-					<div class="panel-body">
-						<?php require_once $gameView ?>
-					</div>
-				</div>
+				<?php require_once $gameView ?>
 			</div>
 		</div>
 
 	</div>
 
 
+	<?php foreach ($bodyScripts as $script): ?>
+		<script src="src/js/<?= $script ?>"></script>
+	<?php endforeach; ?>
 </body>
 </html>
