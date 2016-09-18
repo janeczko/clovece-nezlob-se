@@ -1,0 +1,87 @@
+#game-view {
+  background: none;
+}
+#game {
+  width: 660px;
+  height: 660px;
+  background: none;
+  position: relative;
+}
+#game .playingBoard {
+  width: 660px;
+  height: 660px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: none;
+}
+#game .playingBoard .box,
+#game .playingBoard .startBox,
+#game .playingBoard .homeBox,
+#game .playingBoard .finishBox {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 10;
+}
+#game .playingBoard .box .slot,
+#game .playingBoard .startBox .slot,
+#game .playingBoard .homeBox .slot,
+#game .playingBoard .finishBox .slot {
+  width: 40px;
+  height: 40px;
+  border: 3px solid gray;
+  border-radius: 40px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#game .playingBoard .box .slot:hover,
+#game .playingBoard .startBox .slot:hover,
+#game .playingBoard .homeBox .slot:hover,
+#game .playingBoard .finishBox .slot:hover {
+  border-color: orange;
+}
+#game .playingBoard .startBox,
+#game .playingBoard .homeBox,
+#game .playingBoard .finishBox {
+  z-index: 100;
+}
+#game .playingBoard .figurine {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+#game .playingBoard .figurine .green,
+#game .playingBoard .figurine .blue,
+#game .playingBoard .figurine .yellow,
+#game .playingBoard .figurine .red {
+  width: 24px;
+  height: 24px;
+  border: 1px solid black;
+  border-radius: 28px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  transition: left 1s linear;
+}
+#game .playingBoard .figurine .green:hover,
+#game .playingBoard .figurine .blue:hover,
+#game .playingBoard .figurine .yellow:hover,
+#game .playingBoard .figurine .red:hover {
+  border-color: purple;
+}
+#game .playingBoard .figurine .green {
+  background-color: darkgreen;
+}
+#game .playingBoard .figurine .blue {
+  background-color: dodgerblue;
+}
+#game .playingBoard .figurine .yellow {
+  background-color: gold;
+}
+#game .playingBoard .figurine .red {
+  background-color: darkred;
+}
