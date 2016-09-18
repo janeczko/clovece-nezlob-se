@@ -39,6 +39,10 @@
 	</div>
 
 
+	<?php foreach ($babelScripts as $script): ?>
+		<script type="text/babel" src="src/js/<?= $script ?>"></script>
+	<?php endforeach; ?>
+
 	<?php foreach ($bodyScripts as $script): ?>
 		<script src="src/js/<?= $script ?>"></script>
 	<?php endforeach; ?>

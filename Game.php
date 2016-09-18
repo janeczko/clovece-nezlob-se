@@ -3,7 +3,7 @@
 class Game
 {
 	const INDEX_VIEW = 'view/index-view.phtml';
-	const GAME_VIEW = 'view/game-view.html';
+	const GAME_VIEW = 'view/game-react-view.html';
 
 	protected function renderData()
 	{
@@ -15,17 +15,27 @@ class Game
 	protected function headScripts()
 	{
 		return [
+			'react.js',
+			'react-dom.js',
+			'browser.min.js',
 			'jquery-3.1.0.js',
-			'bootstrap.js',
-			'vue.js'
+			'bootstrap.js'
+			//'vue.js'
 		];
 	}
 
 	protected function bodyScripts()
 	{
 		return [
-			'game-components.js',
-			'game.js'
+			//'game-react.js'
+			//'game-components.js',
+			//'game.js'
+		];
+	}
+
+	protected function babelScripts() {
+		return [
+			'game-react.jsx'
 		];
 	}
 
@@ -40,7 +50,8 @@ class Game
 	{
 		return [
 			'bootstrap.css',
-			'game.css'
+			'game-react.css'
+			//'game.css'
 		];
 	}
 
@@ -51,6 +62,7 @@ class Game
 		$headScripts = $this->headScripts();
 		$bodyScripts = $this->bodyScripts();
 		$configScripts = $this->configScripts();
+		$babelScripts = $this->babelScripts();
 
 		require_once self::INDEX_VIEW;
 	}
